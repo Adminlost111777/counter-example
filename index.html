@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Counter example</title>
+  <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+  <h1>Counter</h1>
+  <p id="result">0</p>
+
+  <div>
+    <img width="200" height="200" onclick="increment()"
+      src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQgByBT5IiAT_a2x9pUVb4VMoOrlzHH7Jrzj-HB5jzHlR4lNLMS">
+  </div>
+
+  <script>
+    // Variable declared
+    let value = 0;
+
+    // This function is called automatically when img is clicked
+    // because we put onclick="increment"
+    function increment() {
+      value++;
+
+      // Access <p> Element whose id is result.
+      const result = document.getElementById("result");
+
+      // Puts content inside <p> Tag new value
+      result.innerHTML = value;
+    }
+  </script>
+
+</body>
+
+</html>
